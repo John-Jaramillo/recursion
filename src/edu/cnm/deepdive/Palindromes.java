@@ -9,4 +9,9 @@ public class Palindromes {
     );
   }
 
+  public static boolean testDenormalized(String denormPhrase) {
+    String replacementString = denormPhrase.toLowerCase().replaceAll("[\\W_]+", "");
+    return (testRecursive(replacementString));
+  }
+
 }
