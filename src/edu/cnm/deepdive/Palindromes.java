@@ -14,4 +14,14 @@ public class Palindromes {
     return (testRecursive(replacementString));
   }
 
+  public static boolean testIterative(String phrase) {
+    int index = phrase.length() -1;
+    for (int i = 0; i < phrase.length() / 2; i++) {
+      if (phrase.charAt(i) != phrase.charAt(index - i)) {
+        return false;
+      }
+    }
+    return true;
+   }
+
 }

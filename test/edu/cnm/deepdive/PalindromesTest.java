@@ -60,4 +60,14 @@ class PalindromesTest {
       assertEquals(expected, actual);
     }
   }
+
+  @Test
+  void testIterative() {
+    for (int i = 0; i < inputValues.length; i++) {
+      String input = inputValues[i];
+      boolean expected = expectedValues[i];
+      boolean actual = Palindromes.testIterative(input);
+      assertEquals(expected, actual);
+    }
+  }
 }
